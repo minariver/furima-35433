@@ -1,24 +1,65 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column           | Type     | Options  |
+| ---------------- | -------- | -------- |
+| nickname         | string   | NOT NULL |
+| email            | string   | NOT NULL |
+| password         | string   | NOT NULL |
+| first_name       | string   | NOT NULL |
+| family_name      | string   | NOT NULL |
+| first_name_kana  | string   | NOT NULL |
+| family_name_kana | string   | NOT NULL |
+| birthday|        | datetime | NOT NULL |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many items
+- has one  purchases
 
-* Configuration
+## items テーブル
 
-* Database creation
+| Column         | Type       | Options  |
+| -------------- | ---------- | ---------|
+| name           | string     | NOT NULL |
+| seller         | string     | NOT NULL |
+| product_detail | text       | NOT NULL |
+| price          | integer    | NOT NULL |
+| category       | string     | NOT NULL |
+| status         | string     | NOT NULL |
+| postage_payer  | integer    | NOT NULL |
+| shipping_area  | string     | NOT NULL |
+| shipment       | datetime   | NOT NULL |
+| items_image    |            | NOT NULL |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs to users
+- has one  purchases
 
-* Services (job queues, cache servers, search engines, etc.)
+## purchasesテーブル
 
-* Deployment instructions
+| Column          | Type    | Options  |
+| --------------- | ------- | -------- |
+| card_number     | integer | NOT NULL |
+| expiration_date | text    | NOT NULL |
+| security_code   | integer | NOT NULL |
 
-* ...
+### Association
+
+- belongs to users
+
+## deliverysテーブル
+
+| Column        | Type    | Options  |
+| --------------| ------- | -------- |
+| postal_code   | integer | NOT NULL |
+| prefecture    | text    | NOT NULL |
+| address       | text    | NOT NULL |
+| building_name | text    |          |
+| phone_number  | integer | NOT NULL |
+
+### Association
+
+- has one  purchases
