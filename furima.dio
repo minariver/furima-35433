@@ -1,0 +1,31 @@
+<mxfile>
+    <diagram id="Mm1SBOWg8psW-44woWSK" name="ページ1">
+        <mxGraphModel dx="697" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="80" width="220" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="nickname&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="71" y="113" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="email&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="76" y="132" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="password&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="71" y="153" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="first_name" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="74" y="174" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="family_name&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="74" y="193" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="220" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
