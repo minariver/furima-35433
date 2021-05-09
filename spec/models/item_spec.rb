@@ -99,7 +99,6 @@ RSpec.describe Item, type: :model do
       end
 
       it 'userが紐付いていないと出品できないこと' do
-        binding.pry
         @item.user = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("User must exist")
