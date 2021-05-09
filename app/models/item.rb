@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :Category
