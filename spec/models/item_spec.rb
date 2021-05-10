@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Item, type: :model do
   describe '#new' do
     before do
-      # user_id = FactoryBot.create(:user)
       @item = FactoryBot.build(:item)
     end
 
@@ -14,12 +13,12 @@ RSpec.describe Item, type: :model do
       end
 
       it 'priceが¥300~¥9,999,999の間のみ出品可能であること' do
-        @item.price = '3000'
+        @item.price = 3000
         expect(@item).to be_valid
       end
 
       it 'priceが半角英数字のみ出品可能であること' do
-        @item.price = '25000'
+        @item.price = 25000
         expect(@item).to be_valid
       end
     end
@@ -45,31 +44,31 @@ RSpec.describe Item, type: :model do
       end
 
       it 'category_idが1だと出品できないこと' do
-        @item.category_id = '1'
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category must be other than 1")
       end
 
       it 'status_idが1だと出品できないこと' do
-        @item.status_id = '1'
+        @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status must be other than 1")
       end
 
       it 'postage_idが1だと出品できないこと' do
-        @item.postage_id = '1'
+        @item.postage_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Postage must be other than 1")
       end
 
       it 'prefecture_idが1だと出品できないこと' do
-        @item.prefecture_id = '1'
+        @item.prefecture_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture must be other than 1")
       end
 
       it 'shipment_idが1だと出品できないこと' do
-        @item.shipment_id = '1'
+        @item.shipment_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipment must be other than 1")
       end
@@ -81,13 +80,13 @@ RSpec.describe Item, type: :model do
       end
 
       it 'priceが¥300未満だと出品できないこと' do
-        @item.price = '100'
+        @item.price = 100
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
       end
 
       it 'priceが¥9,999,999以上だと出品できないこと' do
-        @item.price = '10000000'
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be less than or equal to 9999999")
       end
