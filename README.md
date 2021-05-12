@@ -37,7 +37,7 @@
 - belongs_to :user
 - has_one    :purchase
 
-## purchasesテーブル
+## ordersテーブル
 
 | Column      | Type       | Options                      |
 | ------------| -----------| -----------------------------|
@@ -50,7 +50,7 @@
 - belongs_to :item
 - has_one    :delivery
 
-## deliverysテーブル
+## addressesテーブル
 
 | Column        | Type       | Options                      |
 | --------------| -----------| ---------------------------- |
