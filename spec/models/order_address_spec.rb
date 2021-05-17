@@ -28,7 +28,7 @@ RSpec.describe OrderAddress, type: :model do
       end
 
       it 'postal_codeにハイフンを含まないと購入できないこと' do
-        @order_address.postal_code = 1234567
+        @order_address.postal_code = "1234567"
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Postal code is invalid")
       end
@@ -58,7 +58,7 @@ RSpec.describe OrderAddress, type: :model do
       end
 
       it 'phone_numberが11桁以上だと購入できないこと' do
-        @order_address.phone_number = 123456789112
+        @order_address.phone_number = "123456789112"
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)")
       end
