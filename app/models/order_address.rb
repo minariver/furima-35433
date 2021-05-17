@@ -7,10 +7,14 @@ class OrderAddress
     validates :prefecture_id, numericality: { other_than: 1 } 
     validates :city
     validates :address
-    validates :phone_number, format: { with: /\A\d{11}\z/ }
+    validates :phone_number
     validates :user_id
+    validates :item_id
     
   end
+
+  validates :phone_number, length: { maximum: 11 }
+  validates :phone_number, numericality: { only_integer: true } 
 
   def save
     order = Order.create(item_id: item_id, user_id: user_id)
